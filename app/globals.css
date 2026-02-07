@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#020617] text-slate-400;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Removed for performance */
+
+/* Selection */
+::selection {
+  @apply bg-indigo-500 text-white;
+}
+
+/* Simplified Input - No effects */
+.input-glass {
+  @apply flex h-11 w-full rounded-lg border border-white/10 bg-slate-800/80 px-3 py-2 text-sm text-white;
+  @apply focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500;
+  @apply placeholder:text-slate-500;
+}
+
+/* Navigation Link */
+.nav-link {
+  @apply relative text-sm text-slate-400 transition-colors hover:text-slate-50;
+}
+.nav-link.active {
+  @apply text-slate-50;
+}
+.nav-link.active::after {
+  content: '';
+  @apply absolute -bottom-[22px] left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-white shadow-[0_0_8px_white];
+}
+
+/* Custom Checkbox */
+.checkbox-custom {
+  appearance: none;
+  @apply m-0 w-4 h-4 border border-white/20 rounded bg-white/5 cursor-pointer transition-all;
+  @apply grid place-content-center;
+}
+.checkbox-custom::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: transform 120ms ease-in-out;
+  box-shadow: inset 1em 1em white;
+  transform-origin: center;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.checkbox-custom:checked {
+  @apply bg-blue-600 border-blue-600;
+}
+.checkbox-custom:checked::before {
+  @apply scale-100;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+::-webkit-scrollbar-track {
+  @apply bg-[#020617];
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-700;
+}
+
+/* Simplified Card - No blur, no gradients for maximum performance */
+.glass-card {
+  @apply bg-slate-800/50 border border-white/10 shadow-md;
+  @apply transition-colors duration-200 hover:border-white/20 hover:bg-slate-800/60;
+}
+
+/* Gradient Text */
+.text-gradient {
+  @apply bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent;
+}
+.text-gradient-blue {
+  @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
+}
+
+/* Disable animations for maximum performance */
+.animate-slide-up,
+.animate-fade-in {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Load everything immediately - no lazy rendering */

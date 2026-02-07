@@ -1,0 +1,1 @@
+Bookbag routes every AI message through safe / fix / block with human authority, audit trails, and training-grade exports.
