@@ -17,43 +17,29 @@ export function Hero() {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8 text-balance leading-[1.1]">
-          Every AI message goes through <span className="text-gradient-blue">Bookbag</span>
-          <br /> before it reaches your customers
+          Turn AI outbound into <span className="text-gradient-blue">production-ready outbound</span>
         </h1>
 
         {/* Subheadline */}
         <p className="max-w-2xl mx-auto text-lg text-slate-400 mb-12 text-balance leading-relaxed font-light">
-          The API-first <strong>Production Gate</strong> for AI messaging. Detect hallucinations, enforce compliance rubrics, and route edge cases to humans—all in real-time.
+          Bookbag sits between AI generation and send — routing every outbound message through Approve / Fix / Block, with QA, SME escalation, and audit trails.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
           <Button asChild>
-            <Link href="/contact">Start Integration</Link>
+            <Link href="/contact">Get a free 25-message outbound audit</Link>
           </Button>
           <Button asChild variant="secondary">
-            <Link href="/contact">View Documentation</Link>
+            <Link href="/product">See how the gate works</Link>
           </Button>
         </div>
 
         {/* Trust Logos */}
         <div className="border-t border-white/5 pt-10">
           <p className="text-[10px] uppercase tracking-widest text-slate-600 font-semibold mb-6">
-            Trusted by engineering teams at
+            Built for teams sending AI outbound at scale
           </p>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            <span className="font-bold text-lg text-white tracking-tighter">
-              ACME<span className="text-indigo-500">.ai</span>
-            </span>
-            <span className="font-bold text-lg text-white tracking-tighter">
-              Hyper<span className="font-light text-slate-400">Scale</span>
-            </span>
-            <span className="font-bold text-lg text-white tracking-tighter flex items-center gap-1">
-              <div className="w-4 h-4 rounded-full border-2 border-white" />
-              Orbit
-            </span>
-            <span className="font-bold text-lg text-white tracking-tighter">VELOCITY</span>
-          </div>
         </div>
       </div>
     </section>
