@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
@@ -22,9 +23,13 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group z-50">
-          <div className="w-6 h-6 bg-white rounded flex items-center justify-center text-black shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-            <span className="font-bold text-xs tracking-tighter">B</span>
-          </div>
+          <Image
+            src="/logos/Logo-D3.png"
+            alt="Bookbag"
+            width={120}
+            height={32}
+            className="h-8 w-auto"
+          />
           <span className="font-medium tracking-tight text-white text-sm group-hover:text-slate-200 transition-colors">
             Bookbag
           </span>

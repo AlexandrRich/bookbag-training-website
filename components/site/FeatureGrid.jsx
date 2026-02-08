@@ -58,70 +58,141 @@ export function FeatureGrid({ features }) {
             </div>
           </div>
 
-          {/* Right Content - Code Mockup */}
-          <div className="glass-card rounded-2xl border border-white/10 p-1 shadow-2xl overflow-hidden relative">
+          {/* Right Content - Gate Preview Card */}
+          <div className="glass-card rounded-2xl border border-white/10 p-1 overflow-hidden relative">
             <div className="bg-[#0f1117] rounded-xl overflow-hidden border border-white/5">
-              {/* Window Controls */}
+              {/* Header */}
               <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/[0.02]">
-                <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/20 border border-red-500/50" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500/20 border border-green-500/50" />
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-500/20 border border-red-500/50" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-500/20 border border-green-500/50" />
+                  </div>
+                  <div className="text-[11px] font-medium text-slate-200">Gate Preview</div>
                 </div>
-                <div className="text-[10px] font-mono text-slate-500">
-                  review_queue_12.tsx
-                </div>
-              </div>
-              {/* Code */}
-              <div className="p-6 font-mono text-xs">
-                <div className="flex mb-4">
-                  <div className="w-8 text-slate-700">1</div>
-                  <div className="text-purple-400">const</div>
-                  <div className="text-blue-400 ml-2">verdict</div>
-                  <div className="text-white ml-2">=</div>
-                  <div className="text-yellow-400 ml-2">await</div>
-                  <div className="text-white ml-2">bookbag.evaluate{"({"}</div>
-                </div>
-                <div className="flex mb-1">
-                  <div className="w-8 text-slate-700">2</div>
-                  <div className="text-slate-400 ml-4">input:</div>
-                  <div className="text-green-400 ml-2">generatedDraft</div>
-                  <div className="text-white">,</div>
-                </div>
-                <div className="flex mb-1">
-                  <div className="w-8 text-slate-700">3</div>
-                  <div className="text-slate-400 ml-4">policy_id:</div>
-                  <div className="text-orange-300 ml-2">&quot;finserv_strict_v2&quot;</div>
-                </div>
-                <div className="flex mb-4">
-                  <div className="w-8 text-slate-700">4</div>
-                  <div className="text-white">{"});"}</div>
-                </div>
-                <div className="flex mb-1">
-                  <div className="w-8 text-slate-700">5</div>
-                  <div className="text-purple-400">if</div>
-                  <div className="text-white ml-2">(verdict.flagged) {"{"}</div>
-                </div>
-                <div className="flex mb-1">
-                  <div className="w-8 text-slate-700">6</div>
-                  <div className="text-yellow-400 ml-4">return</div>
-                  <div className="text-blue-400 ml-2">routeToHumanQueue</div>
-                  <div className="text-white">(verdict.reason);</div>
-                </div>
-                <div className="flex mb-1">
-                  <div className="w-8 text-slate-700">7</div>
-                  <div className="text-white">{"}"}</div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-mono text-slate-500">outbound_email • v2</span>
+                  <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-medium text-slate-300">
+                    1 of 25
+                  </span>
                 </div>
               </div>
-              {/* Overlay Tooltip */}
-              <div className="absolute bottom-10 right-10 bg-slate-900 border border-red-500/50 rounded-lg p-3 shadow-2xl shadow-red-900/20 max-w-[200px] animate-slide-up">
-                <div className="flex items-center gap-2 mb-1 text-red-400 font-bold text-[10px] uppercase tracking-wider">
-                  <ShieldAlert className="w-3 h-3" />
-                  Policy Violation
+
+              {/* Body */}
+              <div className="p-5 space-y-4">
+                {/* Message Context */}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <div className="text-[11px] uppercase tracking-widest text-slate-500 font-semibold">AI Draft</div>
+                    {/* Verdict chip */}
+                    <div className="inline-flex items-center gap-2 rounded-full border border-orange-400/20 bg-orange-400/10 px-3 py-1">
+                      <span className="h-2 w-2 rounded-full bg-orange-400" />
+                      <span className="text-[11px] font-semibold text-orange-200">Needs Fix</span>
+                    </div>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                    <div className="text-xs text-slate-200 leading-relaxed">
+                      Hey Jordan — quick note. We guarantee your pipeline will grow 30% this month.
+                      Want me to send over a few examples?
+                    </div>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300">
+                        channel: email
+                      </span>
+                      <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300">
+                        segment: mid-market
+                      </span>
+                      <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300">
+                        intent: book-meeting
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-white text-xs">
-                  &quot;Guaranteed returns&quot; detected. Flagged for review.
-                </p>
+
+                {/* Rubric / Checks */}
+                <div className="space-y-2">
+                  <div className="text-[11px] uppercase tracking-widest text-slate-500 font-semibold">Rubric Checks</div>
+                  <div className="grid grid-cols-1 gap-2">
+                    {/* Pass */}
+                    <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                      <div className="flex items-center gap-3">
+                        <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-green-400/20 bg-green-400/10 text-green-200 text-xs font-bold">
+                          ✓
+                        </span>
+                        <div>
+                          <div className="text-sm font-medium text-slate-100">Tone</div>
+                          <div className="text-xs text-slate-400">Matches your outbound voice</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-slate-400">Score: 4/5</div>
+                    </div>
+
+                    {/* Warn */}
+                    <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                      <div className="flex items-center gap-3">
+                        <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-orange-400/20 bg-orange-400/10 text-orange-200 text-xs font-bold">
+                          !
+                        </span>
+                        <div>
+                          <div className="text-sm font-medium text-slate-100">Personalization</div>
+                          <div className="text-xs text-slate-400">Too generic for claimed specificity</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-slate-400">Score: 2/5</div>
+                    </div>
+
+                    {/* Fail */}
+                    <div className="flex items-center justify-between rounded-xl border border-red-400/20 bg-red-400/10 px-4 py-3">
+                      <div className="flex items-center gap-3">
+                        <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-red-400/30 bg-red-500/10 text-red-200 text-xs font-bold">
+                          ✕
+                        </span>
+                        <div>
+                          <div className="text-sm font-medium text-red-100">Compliance / Claims</div>
+                          <div className="text-xs text-red-200/80">Promissory language: &quot;guarantee&quot;</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-red-200/80">Severity: High</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Suggested Fix */}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <div className="text-[11px] uppercase tracking-widest text-slate-500 font-semibold">Suggested Fix</div>
+                    <span className="text-[10px] text-slate-500">QA rewrite</span>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                    <div className="text-xs text-slate-200 leading-relaxed">
+                      Hey Jordan — quick note. If you&apos;re open to it, I can share a few examples of how teams
+                      improve outbound reply rates without making performance guarantees.
+                    </div>
+                    <div className="mt-3 flex items-center gap-2">
+                      <span className="inline-flex items-center rounded-full border border-indigo-400/20 bg-indigo-400/10 px-2 py-0.5 text-[10px] font-medium text-indigo-200">
+                        rewrite_ready
+                      </span>
+                      <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300">
+                        approval_required
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Audit trail footer */}
+                <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3">
+                  <div className="flex items-center gap-3">
+                    <div className="h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xs text-slate-300">
+                      QA
+                    </div>
+                    <div>
+                      <div className="text-xs font-medium text-slate-200">Routed to QA • awaiting approval</div>
+                      <div className="text-[11px] text-slate-500">Reason: promissory claim + low personalization</div>
+                    </div>
+                  </div>
+                  <div className="text-[11px] text-slate-500">Audit-ready</div>
+                </div>
               </div>
             </div>
           </div>
