@@ -297,7 +297,7 @@ export default function ProductPage() {
               </div>
               <h3 className="font-medium text-white mb-2">Upload Messages</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Upload 100-200 AI-generated messages (email, LinkedIn, SMS) to your Bookbag project for review.
+                Upload 25 AI-generated messages (email, LinkedIn, SMS) to your Bookbag project for review.
               </p>
             </Card>
 

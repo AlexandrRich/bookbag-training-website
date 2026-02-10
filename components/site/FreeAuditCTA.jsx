@@ -19,7 +19,7 @@ export function FreeAuditCTA() {
           </h2>
 
           <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
-            Upload 100-200 AI messages and get back pass/fix/block rates, top failure categories, gold-standard rewrites, and a recommended rubric—all within 72 hours.
+            Upload 25 AI messages and get back pass/fix/block rates, top failure categories, gold-standard rewrites, and a recommended rubric—all within 72 hours.
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 text-left mb-8 max-w-xl mx-auto">

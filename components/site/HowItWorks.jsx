@@ -38,7 +38,7 @@ export function HowItWorks() {
             <div className="text-xs font-mono text-slate-500 mb-2">01 UPLOAD</div>
             <h3 className="font-medium text-white mb-2">Upload Messages</h3>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Upload 100-200 AI-generated messages (email, LinkedIn, SMS) to your Bookbag project.
+              Upload 25 AI-generated messages (email, LinkedIn, SMS) to your Bookbag project.
             </p>
           </div>
 

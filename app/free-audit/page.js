@@ -6,7 +6,7 @@ import { CheckCircle2, Clock, FileText, TrendingUp, ShieldCheck, AlertTriangle }
 export const metadata = {
   title: "Free Outbound Safety Audit | Bookbag",
   description:
-    "Upload 100-200 AI messages and get pass/fix/block rates, gold rewrites, and red flags—free within 72 hours.",
+    "Upload 25 AI messages and get pass/fix/block rates, gold rewrites, and red flags—free within 72 hours.",
 }
 
 export default function FreeAuditPage() {
@@ -25,7 +25,7 @@ export default function FreeAuditPage() {
           </h1>
 
           <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">
-            Upload 100-200 AI-generated messages (email, LinkedIn, SMS) and get back an executive-ready report showing pass/fix/block rates, failure patterns, gold rewrites, and a recommended rubric.
+            Upload 25 AI-generated messages (email, LinkedIn, SMS) and get back an executive-ready report showing pass/fix/block rates, failure patterns, gold rewrites, and a recommended rubric.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -137,7 +137,7 @@ export default function FreeAuditPage() {
                 1
               </div>
               <div>
-                <h3 className="font-medium text-white mb-2">Upload 100-200 AI Messages</h3>
+                <h3 className="font-medium text-white mb-2">Upload 25 AI Messages</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">
                   Email, LinkedIn, SMS, or call scripts — whatever you're sending with AI. No PII required.
                 </p>
@@ -224,7 +224,7 @@ export default function FreeAuditPage() {
             Ready to See Your Risk Profile?
           </h2>
           <p className="text-lg text-slate-400 mb-8">
-            Upload 100-200 messages and get your free safety audit within 72 hours.
+            Upload 25 messages and get your free safety audit within 72 hours.
           </p>
 
           <Button asChild size="lg">
