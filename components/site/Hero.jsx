@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 
 export function Hero() {
   return (
@@ -17,21 +16,37 @@ export function Hero() {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8 text-balance leading-[1.1]">
-          Turn AI outbound into <span className="text-gradient-blue">production-ready outbound</span>
+          Stop risky AI messages <span className="text-blue-400">before they ship</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="max-w-2xl mx-auto text-lg text-slate-400 mb-12 text-balance leading-relaxed font-light">
-          Bookbag sits between AI generation and send — routing every outbound message through Approve / Fix / Block, with QA, SME escalation, and audit trails.
+        <p className="max-w-2xl mx-auto text-lg text-slate-400 mb-6 text-balance leading-relaxed font-light">
+          Bookbag gates AI outbound before it ships — safe messages go out, risky messages get fixed, high-risk messages require SME approval with evidence — and everything is auditable.
         </p>
+
+        {/* 3 Verdict Types */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-400/20 bg-green-400/10">
+            <span className="h-2 w-2 rounded-full bg-green-400" />
+            <span className="text-sm font-medium text-green-200">Safe to Deploy</span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-400/20 bg-orange-400/10">
+            <span className="h-2 w-2 rounded-full bg-orange-400" />
+            <span className="text-sm font-medium text-orange-200">Needs Fix</span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-red-400/20 bg-red-400/10">
+            <span className="h-2 w-2 rounded-full bg-red-400" />
+            <span className="text-sm font-medium text-red-200">Blocked</span>
+          </div>
+        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-          <Button asChild>
-            <Link href="/contact">Get a free 25-message outbound audit</Link>
+          <Button asChild size="lg">
+            <Link href="/free-audit">Get a Free Safety Audit</Link>
           </Button>
-          <Button asChild variant="secondary">
-            <Link href="/product">See how the gate works</Link>
+          <Button asChild variant="secondary" size="lg">
+            <Link href="/product">See How It Works</Link>
           </Button>
         </div>
 

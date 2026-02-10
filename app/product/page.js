@@ -1,7 +1,7 @@
 import { CTA } from "@/components/site/CTA"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Users, UserCheck, ShieldCheck, Cog, Database, Zap } from "lucide-react"
+import { Users, UserCheck, ShieldCheck, Cog, Database } from "lucide-react"
 
 export const metadata = {
   title: "Product | Bookbag Intelligence",
@@ -20,30 +20,39 @@ export default function ProductPage() {
             What is an AI Production Gate?
           </h1>
           <p className="text-lg text-slate-400 leading-relaxed">
-            A production gate is the checkpoint between AI generation and customer delivery. Bookbag evaluates every message, routes edge cases to human authority, and exports training data—all in real-time.
+            A production gate is the checkpoint between AI generation and customer delivery. Bookbag evaluates every message, routes edge cases to human authority, and exports training data—providing quality control and compliance oversight before messages ship.
           </p>
         </div>
       </section>
 
-      {/* Diagram Section */}
+      {/* Workflow Diagram Section */}
       <section className="py-16 border-y border-white/5 bg-[#03081c]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="glass-card p-8 md:p-12 rounded-2xl">
+            <h3 className="text-xl font-medium text-white mb-8 text-center">The Workflow</h3>
             <div className="flex justify-center items-center gap-4 md:gap-8 flex-wrap">
-              <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono">
-                LLM Output
+              <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono text-center min-w-[120px]">
+                AI Generates<br />
+                <span className="text-xs text-slate-500">Email / LinkedIn / SMS</span>
               </div>
               <div className="text-slate-600">→</div>
-              <div className="p-4 rounded border border-indigo-500/50 bg-indigo-500/10 text-indigo-300 text-sm font-mono shadow-[0_0_15px_rgba(99,102,241,0.2)]">
-                Bookbag API
+              <div className="p-4 rounded border border-indigo-500/50 bg-indigo-500/10 text-indigo-300 text-sm font-mono text-center min-w-[120px]">
+                Upload to<br />
+                <span className="text-xs text-indigo-400">Bookbag Project</span>
               </div>
               <div className="text-slate-600">→</div>
-              <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono">
-                ESP / Twilio
+              <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono text-center min-w-[120px]">
+                Human Review<br />
+                <span className="text-xs text-slate-500">Safe / Fix / Block</span>
+              </div>
+              <div className="text-slate-600">→</div>
+              <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono text-center min-w-[120px]">
+                Get Results<br />
+                <span className="text-xs text-slate-500">Approved + Audit</span>
               </div>
             </div>
             <p className="text-center text-slate-500 text-sm mt-8">
-              Bookbag sits between generation and dispatch. Every message is evaluated before send.
+              Upload messages → Expert review → Get approved content back with audit trail
             </p>
           </div>
         </div>
@@ -259,37 +268,49 @@ export default function ProductPage() {
         </div>
       </section>
 
-      {/* Integration Approach */}
+      {/* How to Get Started */}
       <section className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-medium text-white mb-4">
-              Integration Approach
+              How to Get Started
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              API-first. Works with any LLM, any ESP, any workflow.
+              Subscribe to Bookbag and start uploading messages for human review. Works with any LLM, any ESP, any workflow.
             </p>
           </div>
 
-          <Card className="p-8 max-w-3xl mx-auto">
-            <div className="flex items-start gap-4 mb-6">
-              <Zap className="w-6 h-6 text-indigo-400 flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="font-medium text-white mb-2">Single API Call</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  Send your generated message to Bookbag. Get back a verdict (pass/needs_fix/blocked), reasoning, and any flags.
-                </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="p-6">
+              <div className="w-10 h-10 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-4 text-indigo-400">
+                1
               </div>
-            </div>
-            <div className="bg-slate-950 rounded-lg p-4 font-mono text-xs overflow-x-auto">
-              <div className="text-purple-400">POST</div>
-              <div className="text-slate-400 mt-2">https://api.bookbag.ai/v1/evaluate</div>
-              <div className="text-slate-500 mt-4">{"{"}</div>
-              <div className="text-slate-400 ml-4">&quot;message&quot;: &quot;[generated content]&quot;,</div>
-              <div className="text-slate-400 ml-4">&quot;policy_id&quot;: &quot;finserv_v2&quot;</div>
-              <div className="text-slate-500">{"}"}</div>
-            </div>
-          </Card>
+              <h3 className="font-medium text-white mb-2">Subscribe & Create Project</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Choose your plan, create a project, and configure your rubrics and reviewer roles.
+              </p>
+            </Card>
+
+            <Card className="p-6">
+              <div className="w-10 h-10 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-4 text-indigo-400">
+                2
+              </div>
+              <h3 className="font-medium text-white mb-2">Upload Messages</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Upload 100-200 AI-generated messages (email, LinkedIn, SMS) to your Bookbag project for review.
+              </p>
+            </Card>
+
+            <Card className="p-6">
+              <div className="w-10 h-10 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-4 text-indigo-400">
+                3
+              </div>
+              <h3 className="font-medium text-white mb-2">Get Results</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Receive pass/fix/block verdicts, approved rewrites, audit trail, and training data exports.
+              </p>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -301,11 +322,11 @@ export default function ProductPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              "API integration complete",
+              "Project configured and ready",
               "Rubrics defined for your use case",
               "Reviewer roles assigned",
               "QA queue operational",
-              "First 100 messages evaluated",
+              "First 20 messages evaluated",
               "Training data export configured",
               "Audit logs flowing",
               "Blocked items routed to SMEs",

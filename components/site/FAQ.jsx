@@ -20,7 +20,7 @@ export function FAQ({ faqs }) {
     {
       question: "What channels do you support (email/SMS/voice script)?",
       answer:
-        "We support all text-based outbound channels: email, SMS, and voice call scripts. Our API accepts any text payload, evaluates it against your rubrics, and returns a verdict with reasoning. The integration is channel-agnostic.",
+        "We support all text-based outbound channels: email, SMS, and voice call scripts. Upload any text-based message to your Bookbag project, and our expert reviewers will evaluate it against your rubrics and return a verdict with reasoning. The workflow is channel-agnostic.",
     },
     {
       question: "How do you generate training data?",
@@ -35,7 +35,7 @@ export function FAQ({ faqs }) {
     {
       question: "How fast can we launch?",
       answer:
-        "Most teams launch a pilot in under 2 weeks. The integration is a single API call. The time to launch depends on how quickly you define your rubrics and assign reviewers. We provide templates for common use cases (FinServ, insurance, SaaS outbound).",
+        "Most teams launch a pilot in under 2 weeks. The setup is straightforward—create your project, configure rubrics, and start uploading messages. The time to launch depends on how quickly you define your rubrics and assign reviewers. We provide templates for common use cases (FinServ, insurance, SaaS outbound).",
     },
   ]
 

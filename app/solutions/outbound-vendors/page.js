@@ -74,9 +74,9 @@ export default function OutboundVendorsPage() {
                     <div className="w-2 h-2 rounded-full bg-indigo-400" />
                   </div>
                   <div>
-                    <div className="font-medium text-white text-sm">Plug-In Gate Before Send</div>
+                    <div className="font-medium text-white text-sm">Upload & Gate Before Send</div>
                     <div className="text-xs text-slate-500">
-                      API call: send message, get verdict (pass/needs_fix/blocked)
+                      Upload messages, get verdict (pass/needs_fix/blocked)
                     </div>
                   </div>
                 </li>
@@ -108,19 +108,19 @@ export default function OutboundVendorsPage() {
               <div className="text-xs font-mono text-slate-500 mb-4">VENDOR INTEGRATION FLOW</div>
               <div className="space-y-3 text-sm">
                 <div className="bg-slate-950 p-3 rounded border border-white/10">
-                  <div className="text-indigo-400 font-mono text-xs mb-1">1. Your AI generates message</div>
-                  <div className="text-slate-500 text-xs">LLM output → JSON payload</div>
+                  <div className="text-indigo-400 font-mono text-xs mb-1">1. Your AI generates messages</div>
+                  <div className="text-slate-500 text-xs">LLM output batch → Ready for review</div>
                 </div>
                 <div className="text-center text-slate-600">↓</div>
                 <div className="bg-slate-950 p-3 rounded border border-indigo-500/30">
-                  <div className="text-indigo-400 font-mono text-xs mb-1">2. Bookbag evaluates</div>
-                  <div className="text-slate-500 text-xs">POST /v1/evaluate → verdict</div>
+                  <div className="text-indigo-400 font-mono text-xs mb-1">2. Upload to Bookbag project</div>
+                  <div className="text-slate-500 text-xs">Expert reviewers evaluate → verdicts assigned</div>
                 </div>
                 <div className="text-center text-slate-600">↓</div>
                 <div className="bg-slate-950 p-3 rounded border border-white/10">
-                  <div className="text-green-400 font-mono text-xs mb-1">3. Pass → Auto-send</div>
-                  <div className="text-orange-400 font-mono text-xs mb-1">3. Needs Fix → QA queue</div>
-                  <div className="text-red-400 font-mono text-xs mb-1">3. Blocked → SME review</div>
+                  <div className="text-green-400 font-mono text-xs mb-1">3. Pass → Approved to send</div>
+                  <div className="text-orange-400 font-mono text-xs mb-1">3. Needs Fix → QA rewrite provided</div>
+                  <div className="text-red-400 font-mono text-xs mb-1">3. Blocked → SME review required</div>
                 </div>
               </div>
             </div>

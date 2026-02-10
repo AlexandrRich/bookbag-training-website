@@ -17,7 +17,7 @@ export default function RevOpsEnablementPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Badge className="mb-4">RevOps & Enablement</Badge>
           <h1 className="text-5xl md:text-6xl font-medium tracking-tight text-white mb-6">
-            Fix Outbound Quality in 2 Weeks
+            Fix Outbound Quality
           </h1>
           <p className="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
             RevOps owns outbound tools but gets blamed for bad copy. Bookbag catches spammy personalization and builds your approved language library.

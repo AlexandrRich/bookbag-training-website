@@ -16,10 +16,10 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Badge className="mb-4">Pricing</Badge>
           <h1 className="text-5xl md:text-6xl font-medium tracking-tight text-white mb-6">
-            Transparent Pricing
+            Choose Your Plan
           </h1>
           <p className="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
-            Scale securely. No per-seat limits on annotation. Pay for evaluations, not headcount.
+            Credit-based billing that scales with your team. All plans include training data export and audit reports.
           </p>
         </div>
       </section>
@@ -80,13 +80,13 @@ export default function PricingPage() {
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0 mt-2" />
                 <div>
-                  All plans include API access, webhook support, and basic analytics dashboards.
+                  All plans include project management, webhook support, and basic analytics dashboards.
                 </div>
               </li>
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0 mt-2" />
                 <div>
-                  Volume discounts available for teams evaluating &gt;100k messages/month.
+                  Volume discounts and custom credit packages available for Scale and Enterprise plans.
                 </div>
               </li>
               <li className="flex gap-3">

@@ -1,6 +1,8 @@
 import { Hero } from "@/components/site/Hero"
 import { HowItWorks } from "@/components/site/HowItWorks"
+import { WhoItsFor } from "@/components/site/WhoItsFor"
 import { FeatureGrid } from "@/components/site/FeatureGrid"
+import { FreeAuditCTA } from "@/components/site/FreeAuditCTA"
 import { FAQ } from "@/components/site/FAQ"
 import { CTA } from "@/components/site/CTA"
 import { Card } from "@/components/ui/card"
@@ -18,7 +20,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <WhoItsFor />
       <HowItWorks />
+      <FreeAuditCTA />
       <FeatureGrid />
 
       {/* What You Get Section */}
@@ -165,9 +169,9 @@ export default function HomePage() {
       {/* Pricing Teaser */}
       <section className="py-16 border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl font-medium text-white mb-4">Simple, Transparent Pricing</h2>
+          <h2 className="text-2xl font-medium text-white mb-4">Credit-Based Pricing That Scales</h2>
           <p className="text-slate-400 mb-8">
-            Starts at <span className="text-white font-semibold">$500/month</span> for pilots. Most teams start with a free 100-message audit.
+            Plans from <span className="text-white font-semibold">$6,000/month</span> with credit-based billing. Most teams start with a free safety audit to validate the approach.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
