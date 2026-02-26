@@ -190,6 +190,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Explore More */}
+      <section className="py-16 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-medium text-white mb-8 text-center">Explore More</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            <Link href="/for" className="group">
+              <Card className="p-6 hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-medium text-white mb-2 group-hover:text-indigo-300 transition-colors">Solutions by Role</h3>
+                <p className="text-sm text-slate-400">See how Bookbag fits your team, industry, or tech stack.</p>
+              </Card>
+            </Link>
+            <Link href="/integrations" className="group">
+              <Card className="p-6 hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-medium text-white mb-2 group-hover:text-indigo-300 transition-colors">Integrations</h3>
+                <p className="text-sm text-slate-400">Compatible with the tools your outbound team already uses.</p>
+              </Card>
+            </Link>
+            <Link href="/compare" className="group">
+              <Card className="p-6 hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-medium text-white mb-2 group-hover:text-indigo-300 transition-colors">Comparisons</h3>
+                <p className="text-sm text-slate-400">See how Bookbag stacks up against other approaches.</p>
+              </Card>
+            </Link>
+            <Link href="/glossary" className="group">
+              <Card className="p-6 hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-medium text-white mb-2 group-hover:text-indigo-300 transition-colors">Glossary</h3>
+                <p className="text-sm text-slate-400">Key terms in AI outbound quality, compliance, and training data.</p>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <FAQ />
       <CTA />
     </>

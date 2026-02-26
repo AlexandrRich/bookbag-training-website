@@ -21,10 +21,10 @@ export default function IntegrationsIndexPage() {
 
   return (
     <>
-      <section className="pt-24 pb-16">
+      <section className="pt-24 pb-16 animate-slide-up">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Badge className="mb-4">Integrations</Badge>
-          <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-medium tracking-tight text-white mb-6">
             Works With Your Stack
           </h1>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
@@ -33,8 +33,31 @@ export default function IntegrationsIndexPage() {
         </div>
       </section>
 
+      {/* Mini Gate Explainer */}
+      <section className="py-12 border-t border-white/5 bg-[#03081c]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <div className="glass-card p-8 rounded-2xl">
+            <div className="text-xs font-mono text-slate-500 mb-4">HOW INTEGRATIONS WORK</div>
+            <div className="grid sm:grid-cols-3 gap-4 text-sm">
+              <div className="bg-slate-950 p-4 rounded border border-white/10 text-center">
+                <div className="text-indigo-400 font-mono text-xs mb-2">1. Export</div>
+                <div className="text-slate-400 text-xs">Pull AI messages from your tool via CSV or API</div>
+              </div>
+              <div className="bg-slate-950 p-4 rounded border border-indigo-500/30 text-center">
+                <div className="text-indigo-400 font-mono text-xs mb-2">2. Gate</div>
+                <div className="text-slate-400 text-xs">Every message gets a verdict: safe / fix / block</div>
+              </div>
+              <div className="bg-slate-950 p-4 rounded border border-white/10 text-center">
+                <div className="text-green-400 font-mono text-xs mb-2">3. Ship</div>
+                <div className="text-slate-400 text-xs">Approved messages return. Corrections become training data.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {Object.entries(categories).map(([category, items], i) => (
-        <section key={category} className={`py-24 border-t border-white/5 ${i % 2 === 0 ? "bg-[#03081c]" : ""}`}>
+        <section key={category} className={`py-24 border-t border-white/5 ${i % 2 === 0 ? "" : "bg-[#03081c]"}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <h2 className="text-2xl font-medium text-white mb-8">{category}</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

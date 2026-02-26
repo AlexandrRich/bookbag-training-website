@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation"
+import Link from "next/link"
 import { getComparison, getAllComparisonSlugs } from "@/lib/seo/comparisons"
 import { CTA } from "@/components/site/CTA"
 import { FAQ } from "@/components/site/FAQ"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs"
 import { FAQSchema } from "@/components/seo/FAQSchema"
 import { InternalLinks } from "@/components/seo/InternalLinks"
@@ -19,6 +21,7 @@ export function generateMetadata({ params }) {
   return {
     title: data.metaTitle,
     description: data.metaDescription,
+    alternates: { canonical: `/compare/${params.slug}` },
     openGraph: {
       title: data.metaTitle,
       description: data.metaDescription,
@@ -36,7 +39,7 @@ export default function ComparisonPage({ params }) {
       <FAQSchema faqs={data.faqs} />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 relative">
+      <section className="pt-24 pb-16 relative animate-slide-up">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Breadcrumbs
             items={[
@@ -45,21 +48,41 @@ export default function ComparisonPage({ params }) {
             ]}
           />
           <Badge className="mb-4">Comparison</Badge>
-          <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-medium tracking-tight text-white mb-6">
             {data.title}
           </h1>
           <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
             {data.subtitle}
           </p>
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+            <Button asChild size="lg">
+              <Link href="/free-audit">Get a Free Safety Audit</Link>
+            </Button>
+            <Button asChild variant="secondary" size="lg">
+              <Link href="/product">See How It Works</Link>
+            </Button>
+          </div>
         </div>
       </section>
+
+      {/* Quick Answer */}
+      {data.quickAnswer && (
+        <section className="py-16 border-t border-white/5">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <Card className="p-8 border-l-4 border-l-indigo-500">
+              <div className="text-xs font-medium text-indigo-400 uppercase tracking-wider mb-3">Quick Answer</div>
+              <p className="text-lg text-slate-300 leading-relaxed">{data.quickAnswer}</p>
+            </Card>
+          </div>
+        </section>
+      )}
 
       {/* Side by Side */}
       <section className="py-24 border-t border-white/5 bg-[#03081c]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Side A */}
-            <Card className="p-8">
+            <Card className="p-8 bg-indigo-500/5 border-indigo-500/20">
               <h2 className="text-xl font-medium text-white mb-3">{data.sideA.name}</h2>
               <p className="text-sm text-slate-400 mb-6 leading-relaxed">{data.sideA.description}</p>
               <div className="mb-6">
@@ -120,9 +143,20 @@ export default function ComparisonPage({ params }) {
       {/* Verdict */}
       <section className="py-24 border-t border-white/5">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <Badge className="mb-4">Bottom Line</Badge>
           <h2 className="text-3xl font-medium text-white mb-8 text-center">The Verdict</h2>
           <Card className="p-8">
-            <p className="text-slate-300 leading-relaxed">{data.verdict}</p>
+            <p className="text-lg text-slate-300 leading-relaxed">{data.verdict}</p>
+            {data.verdictBullets && data.verdictBullets.length > 0 && (
+              <ul className="mt-6 space-y-3">
+                {data.verdictBullets.map((bullet, i) => (
+                  <li key={i} className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-4 h-4 text-indigo-400 flex-shrink-0 mt-1" />
+                    <span className="text-sm text-slate-400">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </Card>
         </div>
       </section>

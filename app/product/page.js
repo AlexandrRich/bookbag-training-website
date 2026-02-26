@@ -1,7 +1,8 @@
 import { CTA } from "@/components/site/CTA"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Users, UserCheck, ShieldCheck, Cog, Database } from "lucide-react"
+import Link from "next/link"
+import { Users, UserCheck, ShieldCheck, Cog, Database, ArrowRight } from "lucide-react"
 
 export const metadata = {
   title: "Product | Bookbag Intelligence",
@@ -29,7 +30,7 @@ export default function ProductPage() {
       <section className="py-16 border-y border-white/5 bg-[#03081c]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="glass-card p-8 md:p-12 rounded-2xl">
-            <h3 className="text-xl font-medium text-white mb-8 text-center">The Workflow</h3>
+            <h2 className="text-xl font-medium text-white mb-8 text-center">The Workflow</h2>
             <div className="flex justify-center items-center gap-4 md:gap-8 flex-wrap">
               <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono text-center min-w-[120px]">
                 AI Generates<br />
@@ -338,6 +339,31 @@ export default function ProductPage() {
                 {item}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-16 border-t border-white/5 bg-[#03081c]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-medium text-white mb-6">Learn More</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/glossary/ai-production-gate" className="flex items-center justify-between p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-colors group">
+              <span className="text-sm text-slate-300 group-hover:text-white">What is an AI Production Gate?</span>
+              <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-white" />
+            </Link>
+            <Link href="/glossary/sft-training-data" className="flex items-center justify-between p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-colors group">
+              <span className="text-sm text-slate-300 group-hover:text-white">SFT Training Data explained</span>
+              <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-white" />
+            </Link>
+            <Link href="/compare/bookbag-vs-manual-review" className="flex items-center justify-between p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-colors group">
+              <span className="text-sm text-slate-300 group-hover:text-white">Bookbag vs Manual Review</span>
+              <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-white" />
+            </Link>
+            <Link href="/compare/bookbag-vs-prompt-engineering" className="flex items-center justify-between p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-colors group">
+              <span className="text-sm text-slate-300 group-hover:text-white">Bookbag vs Prompt Engineering</span>
+              <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-white" />
+            </Link>
           </div>
         </div>
       </section>
