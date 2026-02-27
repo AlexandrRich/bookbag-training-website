@@ -15,7 +15,7 @@ export function Hero() {
 
         {/* Subheadline */}
         <p className="max-w-2xl mx-auto text-lg text-slate-400 mb-6 text-balance leading-relaxed font-light">
-          Upload your AI&apos;s chat history from sales or support. Our expert reviewers fix what&apos;s broken — hallucinations, off-brand responses, compliance risks. Every correction becomes training data that makes your AI smarter, so you stop burning money on conversations that never should have happened.
+          Upload your AI&apos;s chat history. Our expert reviewers fix what&apos;s broken, hallucinations, off-brand responses, compliance risks. Every correction becomes training data that makes your AI smarter, so you stop burning money on conversations that never should have happened.
         </p>
 
         {/* 3 Verdict Types */}
