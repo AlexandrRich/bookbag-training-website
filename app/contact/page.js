@@ -22,22 +22,14 @@ export default function ContactPage() {
     email: "",
     company: "",
     role: "",
-    evaluating: "",
-    channels: [],
+    aiTool: "",
+    monthlyVolume: "",
+    biggestChallenge: "",
     message: "",
     freeAudit: false,
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleCheckbox = (channel) => {
-    setFormData((prev) => ({
-      ...prev,
-      channels: prev.channels.includes(channel)
-        ? prev.channels.filter((c) => c !== channel)
-        : [...prev.channels, channel],
-    }))
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -70,9 +62,9 @@ export default function ContactPage() {
         <div className="w-20 h-20 bg-green-500/10 border border-green-500/20 text-green-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_-5px_rgba(74,222,128,0.2)]">
           <CheckCircle2 className="w-10 h-10" />
         </div>
-        <h2 className="text-2xl font-medium text-white mb-4">Request Received</h2>
+        <h2 className="text-2xl font-medium text-white mb-4">We&apos;ll be in touch</h2>
         <p className="text-slate-400 mb-8 text-sm">
-          We&apos;ve received your inquiry. A solutions specialist will reach out shortly to discuss your AI outbound needs.
+          A solutions specialist will reach out within one business day to discuss your AI outbound quality needs.
         </p>
         <Button variant="secondary" onClick={() => window.location.href = "/"}>
           Return Home
@@ -87,12 +79,12 @@ export default function ContactPage() {
       <section className="pt-24 pb-12 relative animate-slide-up">
         <div className="absolute top-0 -left-20 w-64 h-64 bg-indigo-500/10 blur-[80px] rounded-full pointer-events-none" />
         <div className="max-w-lg mx-auto px-4 text-center relative z-10">
-          <Badge className="mb-4">Get Started</Badge>
+          <Badge className="mb-4">Book a Demo</Badge>
           <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-3">
-            Request Access
+            Let&apos;s talk about your AI outbound
           </h1>
           <p className="text-slate-400 text-sm">
-            Configure your production gate environment. Most teams launch in under 2 weeks.
+            Tell us about your team and we&apos;ll show you how Bookbag catches quality issues before they reach your prospects.
           </p>
         </div>
       </section>
@@ -154,7 +146,7 @@ export default function ContactPage() {
                 id="company"
                 type="text"
                 required
-                placeholder="Acme AI"
+                placeholder="Acme Inc"
                 value={formData.company}
                 onChange={(e) =>
                   setFormData({ ...formData, company: e.target.value })
@@ -164,86 +156,105 @@ export default function ContactPage() {
 
             {/* Role */}
             <div className="space-y-1.5">
-              <Label htmlFor="role">Role</Label>
+              <Label htmlFor="role">Your Role</Label>
               <Select
                 value={formData.role}
                 onValueChange={(value) => setFormData({ ...formData, role: value })}
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select Role..." />
+                  <SelectValue placeholder="Select your role..." />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="engineering">Engineering</SelectItem>
-                  <SelectItem value="product">Product</SelectItem>
-                  <SelectItem value="compliance">Compliance</SelectItem>
-                  <SelectItem value="revops">RevOps</SelectItem>
-                  <SelectItem value="sales">Sales</SelectItem>
+                  <SelectItem value="vp-sales">VP Sales / Head of Sales</SelectItem>
+                  <SelectItem value="sdr-manager">SDR Manager</SelectItem>
+                  <SelectItem value="revops">RevOps / Sales Ops</SelectItem>
+                  <SelectItem value="compliance">Compliance / Legal</SelectItem>
+                  <SelectItem value="product">Product / Engineering</SelectItem>
+                  <SelectItem value="founder">Founder / CEO</SelectItem>
                   <SelectItem value="other">Other</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            {/* Evaluating */}
+            {/* AI Tool */}
             <div className="space-y-1.5">
-              <Label htmlFor="evaluating">What are you evaluating?</Label>
+              <Label htmlFor="aiTool">What AI outbound tool are you using?</Label>
               <Select
-                value={formData.evaluating}
+                value={formData.aiTool}
                 onValueChange={(value) =>
-                  setFormData({ ...formData, evaluating: value })
+                  setFormData({ ...formData, aiTool: value })
+                }
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select tool..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="11x">11x (Jessica)</SelectItem>
+                  <SelectItem value="artisan">Artisan (Ava)</SelectItem>
+                  <SelectItem value="aisdr">AiSDR</SelectItem>
+                  <SelectItem value="regie">Regie.ai</SelectItem>
+                  <SelectItem value="salesloft">Salesloft</SelectItem>
+                  <SelectItem value="outreach">Outreach</SelectItem>
+                  <SelectItem value="apollo">Apollo</SelectItem>
+                  <SelectItem value="custom-llm">Custom / Internal LLM</SelectItem>
+                  <SelectItem value="evaluating">Still evaluating tools</SelectItem>
+                  <SelectItem value="other">Other</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Monthly Volume */}
+            <div className="space-y-1.5">
+              <Label htmlFor="monthlyVolume">Approximate monthly AI message volume</Label>
+              <Select
+                value={formData.monthlyVolume}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, monthlyVolume: value })
+                }
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select volume..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="under-1k">Under 1,000</SelectItem>
+                  <SelectItem value="1k-5k">1,000 - 5,000</SelectItem>
+                  <SelectItem value="5k-25k">5,000 - 25,000</SelectItem>
+                  <SelectItem value="25k-100k">25,000 - 100,000</SelectItem>
+                  <SelectItem value="100k-plus">100,000+</SelectItem>
+                  <SelectItem value="not-sure">Not sure yet</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Biggest Challenge */}
+            <div className="space-y-1.5">
+              <Label htmlFor="biggestChallenge">Biggest challenge with AI outbound</Label>
+              <Select
+                value={formData.biggestChallenge}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, biggestChallenge: value })
                 }
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select..." />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="outbound-vendor">Outbound Vendor</SelectItem>
-                  <SelectItem value="regulated-sender">Regulated Sender</SelectItem>
-                  <SelectItem value="revops">RevOps / Enablement</SelectItem>
+                  <SelectItem value="quality">Quality issues (hallucinations, generic copy)</SelectItem>
+                  <SelectItem value="compliance">Compliance / regulatory requirements</SelectItem>
+                  <SelectItem value="deliverability">Domain reputation / deliverability</SelectItem>
+                  <SelectItem value="enterprise-readiness">Enterprise readiness (we&apos;re an AI vendor)</SelectItem>
+                  <SelectItem value="no-visibility">No visibility into what AI is sending</SelectItem>
                   <SelectItem value="other">Other</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            {/* Channels */}
-            <div className="space-y-3 pt-2">
-              <Label>Channels of Interest</Label>
-              <div className="flex gap-4 flex-wrap">
-                <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer hover:text-white transition-colors">
-                  <input
-                    type="checkbox"
-                    className="checkbox-custom"
-                    checked={formData.channels.includes("email")}
-                    onChange={() => handleCheckbox("email")}
-                  />
-                  Email
-                </label>
-                <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer hover:text-white transition-colors">
-                  <input
-                    type="checkbox"
-                    className="checkbox-custom"
-                    checked={formData.channels.includes("sms")}
-                    onChange={() => handleCheckbox("sms")}
-                  />
-                  SMS
-                </label>
-                <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer hover:text-white transition-colors">
-                  <input
-                    type="checkbox"
-                    className="checkbox-custom"
-                    checked={formData.channels.includes("voice")}
-                    onChange={() => handleCheckbox("voice")}
-                  />
-                  Voice Script
-                </label>
-              </div>
-            </div>
-
             {/* Message */}
             <div className="space-y-1.5">
-              <Label htmlFor="message">Message (Optional)</Label>
+              <Label htmlFor="message">Anything else? (Optional)</Label>
               <Textarea
                 id="message"
-                placeholder="Tell us about your use case..."
+                placeholder="Tell us more about what you're experiencing..."
                 value={formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -262,7 +273,7 @@ export default function ContactPage() {
                     setFormData({ ...formData, freeAudit: e.target.checked })
                   }
                 />
-                I&apos;m interested in a free 25-message audit
+                I&apos;d also like a free 25-message audit
               </label>
             </div>
 
@@ -273,7 +284,7 @@ export default function ContactPage() {
                 className="w-full"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Submitting..." : "Submit Request"}
+                {isSubmitting ? "Submitting..." : "Book a Demo"}
               </Button>
             </div>
             <p className="text-[10px] text-center text-slate-600">
