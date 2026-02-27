@@ -164,7 +164,6 @@ export function PricingTable() {
         </div>
 
         <div className="mt-12 text-center text-sm text-slate-400 space-y-3">
-          <p>All plans include a 14-day free trial. No credit card required to start.</p>
           <p>
             Need help choosing?{" "}
             <Link href="/contact" className="text-indigo-400 hover:text-indigo-300 font-medium">
