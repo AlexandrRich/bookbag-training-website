@@ -44,7 +44,7 @@ export default function VerdictSystemArticle() {
                   <h3 className="text-xl font-medium text-white">safe_to_deploy</h3>
                 </div>
                 <p className="text-slate-300 leading-relaxed mb-3">
-                  Message passes all rubric checks. No issues detected. Auto-approved and logged.
+                  Message passes all rubric checks. No issues detected. Approved and logged with full context.
                 </p>
                 <div className="text-sm text-slate-400">
                   <strong className="text-white">Typical rate:</strong> 90-95% of messages
@@ -85,10 +85,10 @@ export default function VerdictSystemArticle() {
 
             <h3 className="text-xl font-medium text-white mt-8 mb-3">Safe to Deploy</h3>
             <p className="text-slate-300 leading-relaxed mb-4">
-              These messages have no detected issues. They ship immediately with no human review required.
+              These messages pass all rubric checks. They&apos;re approved and cleared for delivery.
             </p>
             <p className="text-slate-300 leading-relaxed mb-6">
-              Even though they auto-approve, they're still logged with full context: timestamp, rubric version, and evaluation results. If regulators ask "Who approved this?" you have the answer: "The system did, under policy v2.3, and here's why."
+              Every approved message is logged with full context: timestamp, rubric version, reviewer, and evaluation results. If regulators ask &quot;Who approved this?&quot; you have the answer — with a complete audit trail.
             </p>
 
             <h3 className="text-xl font-medium text-white mt-8 mb-3">Needs Fix</h3>
@@ -151,7 +151,7 @@ export default function VerdictSystemArticle() {
               A message with weak personalization isn't a compliance risk—it just needs better copy. Routing this to the SME lane wastes their time and creates a bottleneck.
             </p>
             <p className="text-slate-300 leading-relaxed mb-6">
-              The three-lane model allows you to scale supervision: auto-approve most messages, fix the fixable issues quickly, and reserve SME attention for genuine high-risk decisions.
+              The three-lane model allows you to scale supervision: approve clean messages quickly, fix the fixable issues efficiently, and reserve SME attention for genuine high-risk decisions.
             </p>
 
             <h2 className="text-2xl font-medium text-white mt-12 mb-4">Key Takeaways</h2>
@@ -162,7 +162,7 @@ export default function VerdictSystemArticle() {
               </li>
               <li className="flex gap-3">
                 <span className="text-indigo-400">2.</span>
-                <span>Safe messages auto-approve with full audit logs</span>
+                <span>Safe messages are approved with full audit logs</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-indigo-400">3.</span>

@@ -85,9 +85,9 @@ export function Header() {
 
         {/* CTA Buttons */}
         <div className="flex items-center gap-4 z-50">
-          <Link href="/contact" className="hidden md:inline-flex text-xs font-medium text-slate-400 hover:text-white transition-colors">
+          <a href="https://app.bookbag.ai/bb-auth/login" className="hidden md:inline-flex text-xs font-medium text-slate-400 hover:text-white transition-colors">
             Log in
-          </Link>
+          </a>
           <Button asChild size="sm">
             <Link href="/contact">Book Demo</Link>
           </Button>

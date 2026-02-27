@@ -21,11 +21,11 @@ export default function FreeAuditPage() {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-medium tracking-tight text-white mb-6">
-            Get a Free Outbound Safety Audit
+            See What Your AI SDR Is Really Sending
           </h1>
 
           <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">
-            Upload 25 AI-generated messages (email, LinkedIn, SMS) and get back an executive-ready report showing pass/fix/block rates, failure patterns, gold rewrites, and a recommended rubric.
+            Upload 25 AI-generated messages (email, LinkedIn, SMS) and get back an executive-ready report showing pass/fix/block rates, failure patterns, gold rewrites, and a recommended rubric. Find out before your prospects do.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

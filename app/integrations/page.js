@@ -37,7 +37,7 @@ export default function IntegrationsIndexPage() {
       <section className="py-12 border-t border-white/5 bg-[#03081c]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="glass-card p-8 rounded-2xl">
-            <div className="text-xs font-mono text-slate-500 mb-4">HOW INTEGRATIONS WORK</div>
+            <div className="text-xs font-mono text-slate-500 mb-4">HOW IT WORKS</div>
             <div className="grid sm:grid-cols-3 gap-4 text-sm">
               <div className="bg-slate-950 p-4 rounded border border-white/10 text-center">
                 <div className="text-indigo-400 font-mono text-xs mb-2">1. Export</div>

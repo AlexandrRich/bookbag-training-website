@@ -11,9 +11,9 @@ import Link from "next/link"
 import { Shield, Code2, BarChart3, CheckCircle2, ArrowRight } from "lucide-react"
 
 export const metadata = {
-  title: "Bookbag Intelligence | The AI Outbound Production Gate",
+  title: "Bookbag Intelligence | Catch Bad AI Emails Before They Ship",
   description:
-    "Stop risky AI messages before they ship. The AI Production Gate for outbound teams.",
+    "Bookbag catches hallucinations, spammy personalization, and compliance violations before they reach your prospects. Human review for AI outbound at scale.",
 }
 
 export default function HomePage() {
@@ -42,9 +42,9 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-4 text-indigo-400">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
-              <h3 className="font-medium text-white mb-2">Approval Queue & Routing</h3>
+              <h3 className="font-medium text-white mb-2">Message Review Queue</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Automatic verdict routing: safe_to_deploy, needs_fix, blocked. Each with full context and reasoning.
+                Every AI message gets a verdict. Approved messages ship. Flagged messages get expert rewrites. High-risk messages require sign-off.
               </p>
             </Card>
 
@@ -52,9 +52,9 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-lg bg-green-500/10 border border-green-500/20 flex items-center justify-center mb-4 text-green-400">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
-              <h3 className="font-medium text-white mb-2">QA Rewrites & Gold Standards</h3>
+              <h3 className="font-medium text-white mb-2">Expert Rewrites</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Human reviewers can edit, approve, or escalate. Corrections become your gold-standard examples.
+                When a message needs fixing, your reviewers rewrite it. Those rewrites become approved examples your team and AI can reference.
               </p>
             </Card>
 
@@ -62,9 +62,9 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-4 text-orange-400">
                 <Shield className="w-5 h-5" />
               </div>
-              <h3 className="font-medium text-white mb-2">SME Lane for Blocked Items</h3>
+              <h3 className="font-medium text-white mb-2">Expert Sign-Off for High-Risk Messages</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Subject matter experts make final calls with evidence trails. Full provenance tracking.
+                Compliance-sensitive or high-risk messages require subject matter expert approval with documented rationale.
               </p>
             </Card>
 
@@ -72,9 +72,9 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-4 text-blue-400">
                 <BarChart3 className="w-5 h-5" />
               </div>
-              <h3 className="font-medium text-white mb-2">Audit Trail Exports</h3>
+              <h3 className="font-medium text-white mb-2">Full Audit Trail</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Export who/what/when/why for every decision. Full compliance recordkeeping.
+                Every decision logged: who approved, when, why, and which rules applied. Export for compliance review anytime.
               </p>
             </Card>
 
@@ -82,9 +82,9 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4 text-purple-400">
                 <Code2 className="w-5 h-5" />
               </div>
-              <h3 className="font-medium text-white mb-2">Taxonomy & Rubrics</h3>
+              <h3 className="font-medium text-white mb-2">Your Standards, Enforced at Scale</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Version-stamped policies and rubrics. Project-level configuration and dynamic forms.
+                Define your quality criteria once. Bookbag applies them consistently across every message, every campaign.
               </p>
             </Card>
 
@@ -92,9 +92,9 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-4 text-teal-400">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
-              <h3 className="font-medium text-white mb-2">Training Data Exports</h3>
+              <h3 className="font-medium text-white mb-2">AI Improvement Loop</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                SFT, DPO, ranking data with full metadata. Retrain your models with real human feedback.
+                Every human correction becomes training data for your AI models. Better output quality over time with less manual review.
               </p>
             </Card>
           </div>

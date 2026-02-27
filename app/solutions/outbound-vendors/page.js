@@ -170,7 +170,7 @@ export default function OutboundVendorsPage() {
               </div>
             </div>
             <div className="text-xs text-slate-500">
-              Typical improvement: 30-50% reduction in flagged messages after first training cycle.
+              As corrections accumulate, your AI produces better first drafts and requires less human review over time.
             </div>
           </Card>
         </div>

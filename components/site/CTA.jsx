@@ -6,7 +6,7 @@ export function CTA({
   primaryText = "Request a demo",
   primaryHref = "/contact",
   secondaryText = "Get a free audit",
-  secondaryHref = "/contact"
+  secondaryHref = "/free-audit"
 }) {
   return (
     <section className="py-32 relative overflow-hidden">
@@ -21,7 +21,7 @@ export function CTA({
           {title}
         </h2>
         <p className="text-lg text-slate-400 mb-10 font-light">
-          Join the engineering teams building safe, high-volume AI messaging systems.
+          Join the teams shipping AI outbound they&apos;re proud of.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

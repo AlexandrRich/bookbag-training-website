@@ -69,7 +69,7 @@ export default function ProductionGateArticle() {
                 <div className="text-slate-600">  ↓</div>
                 <div className="text-indigo-400">Production Gate evaluates</div>
                 <div className="text-slate-600">  ↓</div>
-                <div className="text-green-400">Pass → Auto-send</div>
+                <div className="text-green-400">Pass → Approved for delivery</div>
                 <div className="text-orange-400">Needs Fix → Human QA</div>
                 <div className="text-red-400">Blocked → SME review</div>
               </div>
@@ -92,7 +92,7 @@ export default function ProductionGateArticle() {
             <ul className="space-y-3 text-slate-300 mb-6">
               <li className="flex gap-3">
                 <span className="text-green-400 flex-shrink-0">✓</span>
-                <span><strong className="text-white">safe_to_deploy</strong> — Message passes all checks and auto-approves</span>
+                <span><strong className="text-white">safe_to_deploy</strong> — Message passes all checks and is approved for delivery</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-orange-400 flex-shrink-0">!</span>

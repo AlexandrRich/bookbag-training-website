@@ -7,7 +7,7 @@ import { Users, UserCheck, ShieldCheck, Cog, Database, ArrowRight } from "lucide
 export const metadata = {
   title: "Product | Bookbag Intelligence",
   description:
-    "Learn how Bookbag Intelligence works. The AI Production Gate for safe, auditable AI outbound.",
+    "Learn how Bookbag Intelligence works. Human review for AI-generated outbound — catch hallucinations, enforce quality, export training data.",
 }
 
 export default function ProductPage() {
@@ -18,10 +18,10 @@ export default function ProductPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Badge className="mb-4">Product Overview</Badge>
           <h1 className="text-5xl md:text-6xl font-medium tracking-tight text-white mb-6">
-            What is an AI Production Gate?
+            How Bookbag Works
           </h1>
           <p className="text-lg text-slate-400 leading-relaxed">
-            A production gate is the checkpoint between AI generation and customer delivery. Bookbag evaluates every message, routes edge cases to human authority, and exports training data—providing quality control and compliance oversight before messages ship.
+            Upload messages from any AI tool — email, LinkedIn, SMS. Bookbag evaluates every message, routes edge cases to human reviewers, and exports training data — providing quality control and compliance oversight before messages ship.
           </p>
         </div>
       </section>
@@ -37,14 +37,19 @@ export default function ProductPage() {
                 <span className="text-xs text-slate-500">Email / LinkedIn / SMS</span>
               </div>
               <div className="text-slate-600">→</div>
+              <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono text-center min-w-[120px]">
+                Export from<br />
+                <span className="text-xs text-slate-500">Your Tool (CSV / API)</span>
+              </div>
+              <div className="text-slate-600">→</div>
               <div className="p-4 rounded border border-indigo-500/50 bg-indigo-500/10 text-indigo-300 text-sm font-mono text-center min-w-[120px]">
                 Upload to<br />
                 <span className="text-xs text-indigo-400">Bookbag Project</span>
               </div>
               <div className="text-slate-600">→</div>
               <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono text-center min-w-[120px]">
-                Human Review<br />
-                <span className="text-xs text-slate-500">Safe / Fix / Block</span>
+                Expert Review<br />
+                <span className="text-xs text-slate-500">Approved / Rewrite / Blocked</span>
               </div>
               <div className="text-slate-600">→</div>
               <div className="p-4 rounded border border-white/10 bg-white/5 text-white text-sm font-mono text-center min-w-[120px]">
@@ -70,14 +75,14 @@ export default function ProductPage() {
               <div className="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 text-blue-400">
                 <Users className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">Worker Queue</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Your Team Reviews</h3>
               <p className="text-sm text-slate-400 leading-relaxed mb-4">
-                Annotators review flagged messages and apply labels. Fast, structured workflows for high-volume review.
+                Reviewers evaluate flagged messages against your quality standards. Fast, structured workflows for high-volume review.
               </p>
               <ul className="text-xs text-slate-500 space-y-2">
                 <li>• Task-based queue</li>
                 <li>• Rubric-guided evaluation</li>
-                <li>• Quick accept/reject/escalate</li>
+                <li>• Quick approve/reject/escalate</li>
               </ul>
             </Card>
 
@@ -85,14 +90,14 @@ export default function ProductPage() {
               <div className="w-12 h-12 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mb-6 text-indigo-300">
                 <UserCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">QA Review Queue</h3>
+              <h3 className="text-lg font-medium text-white mb-3">QA Checks</h3>
               <p className="text-sm text-slate-400 leading-relaxed mb-4">
-                QA can rewrite, approve, or escalate. Corrections become gold-standard training examples.
+                QA can rewrite, approve, or escalate. Corrections become gold-standard examples your AI can learn from.
               </p>
               <ul className="text-xs text-slate-500 space-y-2">
                 <li>• Edit & approve workflow</li>
                 <li>• Create approved templates</li>
-                <li>• Export training pairs (SFT/DPO)</li>
+                <li>• Export training data</li>
               </ul>
             </Card>
 
@@ -100,9 +105,9 @@ export default function ProductPage() {
               <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-6 text-orange-400">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-medium text-white mb-3">SME Final Review Queue</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Experts Approve</h3>
               <p className="text-sm text-slate-400 leading-relaxed mb-4">
-                Subject matter experts make final calls on blocked items. Full provenance and evidence trails.
+                Subject matter experts make final calls on high-risk messages. Full provenance and evidence trails.
               </p>
               <ul className="text-xs text-slate-500 space-y-2">
                 <li>• Blocked-only items</li>
@@ -120,10 +125,10 @@ export default function ProductPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-medium text-white mb-6">
-                Evidence Trail & Provenance
+                Know Exactly Who Approved Every Message
               </h2>
               <p className="text-slate-400 mb-6 leading-relaxed">
-                Every decision in Bookbag is logged with full context: who approved, when, why, and which rubric version was used.
+                Every decision in Bookbag is logged with full context: who approved, when, why, and which rules were in effect.
               </p>
               <ul className="space-y-4">
                 <li className="flex gap-3">
@@ -205,10 +210,10 @@ export default function ProductPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-medium text-white mb-4">
-              Taxonomy & Dynamic Forms
+              Your Standards, Configured Once
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Configure your rubrics, policies, and review forms per project. Version-stamped for audit compliance.
+              Configure your quality criteria, policies, and review forms per project. Version-stamped for audit compliance.
             </p>
           </div>
 
@@ -236,10 +241,10 @@ export default function ProductPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-medium text-white mb-4">
-              Exports & Training Data Formats
+              Your AI Gets Better Over Time
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Turn human corrections into training data. Export in standard ML formats.
+              Every human correction becomes training data. Export in standard ML formats to retrain your models.
             </p>
           </div>
 
@@ -298,7 +303,7 @@ export default function ProductPage() {
               </div>
               <h3 className="font-medium text-white mb-2">Upload Messages</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Upload 25 AI-generated messages (email, LinkedIn, SMS) to your Bookbag project for review.
+                Upload AI-generated messages (email, LinkedIn, SMS) to your Bookbag project for expert review.
               </p>
             </Card>
 

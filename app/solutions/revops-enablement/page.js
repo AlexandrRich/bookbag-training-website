@@ -71,7 +71,7 @@ export default function RevOpsEnablementPage() {
                 See blocked rate, top failure modes, and quality drift over time. Catch issues before they become escalations.
               </p>
               <ul className="text-xs text-slate-500 space-y-2">
-                <li>• % of messages auto-approved vs flagged</li>
+                <li>• % of messages approved vs flagged</li>
                 <li>• Top rubric violations by category</li>
                 <li>• Quality trend: improving or degrading?</li>
               </ul>
@@ -107,12 +107,12 @@ export default function RevOpsEnablementPage() {
               <CheckCircle2 className="w-10 h-10 text-blue-400 mb-6" />
               <h3 className="text-lg font-medium text-white mb-3">Governance Without Bottlenecks</h3>
               <p className="text-sm text-slate-400 leading-relaxed mb-4">
-                Set rubrics once. Bookbag enforces them at scale. Safe messages auto-approve. Edge cases route to QA. No manual review of every message.
+                Set rubrics once. Bookbag enforces them at scale. Clean messages get approved. Edge cases route to QA. Structured review instead of ad-hoc spot checks.
               </p>
               <ul className="text-xs text-slate-500 space-y-2">
-                <li>• Define "good" once, enforce everywhere</li>
-                <li>• Auto-approve 90%+ of messages</li>
-                <li>• Review queue for only the edge cases</li>
+                <li>• Define &quot;good&quot; once, enforce everywhere</li>
+                <li>• Structured review queue for flagged messages</li>
+                <li>• Expert reviewers handle edge cases</li>
               </ul>
             </Card>
           </div>
@@ -169,20 +169,20 @@ export default function RevOpsEnablementPage() {
         </div>
       </section>
 
-      {/* Metrics That Matter */}
+      {/* What You Can Expect */}
       <section className="py-24 border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl font-medium text-white mb-8">Metrics That Matter</h2>
+          <h2 className="text-3xl font-medium text-white mb-8">What You Can Expect</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6">
-              <div className="text-3xl font-bold text-indigo-400 mb-2">92%</div>
-              <div className="text-sm text-slate-300 mb-1">Auto-Approved</div>
-              <div className="text-xs text-slate-500">Most messages pass without review</div>
+              <div className="text-3xl font-bold text-indigo-400 mb-2">Every</div>
+              <div className="text-sm text-slate-300 mb-1">Message Reviewed</div>
+              <div className="text-xs text-slate-500">Nothing ships without human sign-off</div>
             </Card>
             <Card className="p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">-40%</div>
-              <div className="text-sm text-slate-300 mb-1">Flagged Rate</div>
-              <div className="text-xs text-slate-500">After first training cycle</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">Fewer</div>
+              <div className="text-sm text-slate-300 mb-1">Flags Over Time</div>
+              <div className="text-xs text-slate-500">Corrections retrain your AI models</div>
             </Card>
             <Card className="p-6">
               <div className="text-3xl font-bold text-teal-400 mb-2">2 weeks</div>

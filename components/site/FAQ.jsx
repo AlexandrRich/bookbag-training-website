@@ -10,7 +10,7 @@ export function FAQ({ faqs }) {
     {
       question: "What do you mean by production gate?",
       answer:
-        "A production gate is a checkpoint between AI generation and deployment. Before any message ships to a customer, it passes through Bookbag's evaluation engine. We route outputs to three lanes: safe_to_deploy (auto-approved), needs_fix (QA review), and blocked (SME decision with evidence). This creates an audit trail and prevents risky outputs from reaching customers.",
+        "Before any AI message reaches your customer, it goes through Bookbag. Messages that pass your quality standards are approved. Messages with issues get rewritten by expert reviewers. High-risk messages require subject matter expert sign-off with documented rationale. Every decision is logged with a full audit trail.",
     },
     {
       question: "Do you replace compliance teams?",
@@ -25,7 +25,7 @@ export function FAQ({ faqs }) {
     {
       question: "How do you generate training data?",
       answer:
-        "Every human correction in Bookbag becomes a training datapoint. When QA rewrites a message or an SME provides feedback, we export that as preference pairs (DPO), supervised fine-tuning examples (SFT), or ranking data. You own all exports and can use them to retrain your models.",
+        "Every time a reviewer corrects a message, that correction becomes training data you can use to improve your AI. Export in standard ML formats (SFT, DPO, ranking) and retrain your models. Over time, your AI produces better first drafts and requires less human review.",
     },
     {
       question: "Can we use our own reviewers/SMEs?",

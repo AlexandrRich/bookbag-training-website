@@ -63,7 +63,7 @@ export default function AuditTrailsArticle() {
               </li>
             </ul>
             <p className="text-slate-300 leading-relaxed mb-6">
-              For auto-approved messages, the answer is "System auto-approved under policy v2.3." For human-reviewed messages, it's the actual reviewer's email.
+              Every message is logged with the reviewer who approved it, their role, and the policy version in effect at the time of review.
             </p>
 
             <h3 className="text-xl font-medium text-white mt-8 mb-3">2. Policy Version Stamping</h3>

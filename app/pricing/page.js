@@ -92,11 +92,45 @@ export default function PricingPage() {
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0 mt-2" />
                 <div>
-                  Most teams start with a free 100-message audit to validate the approach.
+                  Most teams start with a free 25-message audit to validate the approach.
                 </div>
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* ROI Context */}
+      <section className="py-24 border-t border-white/5 bg-[#03081c]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl font-medium text-white mb-8 text-center">
+            What does it cost when...
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="glass-card p-6 rounded-xl">
+              <div className="text-2xl font-bold text-red-400 mb-2">$53,088</div>
+              <div className="text-sm text-white mb-1">Per compliance violation (FTC)</div>
+              <div className="text-xs text-slate-500">A single AI hallucination in a regulated industry can trigger regulatory action</div>
+            </div>
+            <div className="glass-card p-6 rounded-xl">
+              <div className="text-2xl font-bold text-orange-400 mb-2">Weeks</div>
+              <div className="text-sm text-white mb-1">To recover a burned sending domain</div>
+              <div className="text-xs text-slate-500">Spammy AI messages tank deliverability — recovery takes weeks of lost pipeline</div>
+            </div>
+            <div className="glass-card p-6 rounded-xl">
+              <div className="text-2xl font-bold text-yellow-400 mb-2">1 email</div>
+              <div className="text-sm text-white mb-1">To lose your biggest prospect</div>
+              <div className="text-xs text-slate-500">A hallucinated claim to a key account can destroy a relationship permanently</div>
+            </div>
+            <div className="glass-card p-6 rounded-xl">
+              <div className="text-2xl font-bold text-purple-400 mb-2">70-80%</div>
+              <div className="text-sm text-white mb-1">Churn at leading AI SDR vendors</div>
+              <div className="text-xs text-slate-500">Quality problems are the #1 reason customers cancel AI outbound tools</div>
+            </div>
+          </div>
+          <p className="text-center text-slate-400 text-sm mt-8">
+            Bookbag isn&apos;t an expense — it&apos;s insurance for your AI outbound program.
+          </p>
         </div>
       </section>
 

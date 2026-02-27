@@ -122,7 +122,7 @@ export default function RegulatedOutboundPage() {
               </div>
               <h3 className="font-medium text-white mb-3">Policy Enforcement</h3>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Codify your compliance rubrics. Bookbag evaluates every message against your policies before it ships to customers.
+                Codify your compliance rubrics — FINRA 2210, CAN-SPAM, TCPA, state-level regulations. Bookbag evaluates every message against your policies before it ships to customers.
               </p>
             </Card>
           </div>
@@ -155,7 +155,7 @@ export default function RegulatedOutboundPage() {
                 <div>
                   <h3 className="font-medium text-white mb-2">Faster Review Workflows</h3>
                   <p className="text-sm text-slate-400 leading-relaxed">
-                    Auto-approve safe messages. Route only edge cases to QA/SME. Supervision workflows that scale with volume.
+                    Clean messages get approved quickly. Route edge cases to QA and high-risk items to SMEs. Supervision workflows that scale with volume.
                   </p>
                 </div>
               </div>

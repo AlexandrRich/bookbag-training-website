@@ -4,21 +4,21 @@ export function FeatureGrid({ features }) {
   const defaultFeatures = [
     {
       icon: ShieldAlert,
-      title: "Prevent Reputation Risk",
+      title: "Catch Hallucinations Before They Ship",
       description:
-        "Stop hallucinations, prohibited promissory claims, and brand-damaging messages before they reach the inbox.",
+        "Your AI fabricated a stat, invented a job title, or made a promise you can't keep. Bookbag catches it before your prospect sees it.",
     },
     {
       icon: TrendingUp,
-      title: "Enforce Copy Standards",
+      title: "Enforce Your Quality Bar",
       description:
-        "Codify your best SDRs' intuition into rubrics. Automatically flag low-effort or spammy personalization.",
+        "Define what 'good' looks like once. Bookbag applies it to every message — flagging generic personalization, spammy language, and off-brand tone.",
     },
     {
       icon: RefreshCcw,
-      title: "Close the Learning Loop",
+      title: "Your AI Gets Better Over Time",
       description:
-        "Turn every human intervention into a high-quality training datapoint (SFT/DPO) to improve your base model.",
+        "Every human correction becomes training data. Export it to retrain your models. Fewer flags, better first drafts, less review over time.",
     },
   ]
 
@@ -34,7 +34,7 @@ export function FeatureGrid({ features }) {
           {/* Left Content */}
           <div>
             <h2 className="text-3xl font-medium tracking-tight text-white mb-6">
-              Why teams deploy the Gate
+              Why teams use Bookbag
             </h2>
             <div className="space-y-8">
               {displayFeatures.map((feature, index) => {
@@ -74,7 +74,7 @@ export function FeatureGrid({ features }) {
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-mono text-slate-500">outbound_email • v2</span>
                   <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-medium text-slate-300">
-                    1 of 25
+                    1 of 847
                   </span>
                 </div>
               </div>

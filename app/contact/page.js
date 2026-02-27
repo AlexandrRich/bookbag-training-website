@@ -72,7 +72,7 @@ export default function ContactPage() {
         </div>
         <h2 className="text-2xl font-medium text-white mb-4">Request Received</h2>
         <p className="text-slate-400 mb-8 text-sm">
-          We've received your inquiry. An integration specialist will reach out shortly to discuss your AI outbound production gate needs.
+          We&apos;ve received your inquiry. A solutions specialist will reach out shortly to discuss your AI outbound needs.
         </p>
         <Button variant="secondary" onClick={() => window.location.href = "/"}>
           Return Home
@@ -262,7 +262,7 @@ export default function ContactPage() {
                     setFormData({ ...formData, freeAudit: e.target.checked })
                   }
                 />
-                I'm interested in a free 100-message audit
+                I&apos;m interested in a free 25-message audit
               </label>
             </div>
 
