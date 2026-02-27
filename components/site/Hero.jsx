@@ -10,12 +10,12 @@ export function Hero() {
       <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8 text-balance leading-[1.1]">
-          Your AI SDR is sending emails <span className="text-blue-400">you&apos;d never approve</span>
+          Turn your AI&apos;s worst conversations into <span className="text-blue-400">its best training data</span>
         </h1>
 
         {/* Subheadline */}
         <p className="max-w-2xl mx-auto text-lg text-slate-400 mb-6 text-balance leading-relaxed font-light">
-          Bookbag catches hallucinations, spammy personalization, and compliance violations before they reach your prospects — so you get the scale of AI without the brand damage.
+          Upload your AI&apos;s chat history from sales or support. Our expert reviewers fix what&apos;s broken — hallucinations, off-brand responses, compliance risks. Every correction becomes training data that makes your AI smarter, so you stop burning money on conversations that never should have happened.
         </p>
 
         {/* 3 Verdict Types */}

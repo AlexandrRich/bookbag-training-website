@@ -4,9 +4,9 @@ export { size, contentType }
 
 export default function Image() {
   return renderOGImage({
-    title: "Your AI SDR is sending emails you'd never approve",
+    title: "Your AI SDR is burning money and pipeline",
     badge: "Bookbag Intelligence",
     description:
-      "Catch hallucinations, spammy personalization, and compliance violations before they reach your prospects.",
+      "Review every AI message before it ships. Stop losing deals to hallucinations, spammy copy, and compliance violations.",
   })
 }
