@@ -4,9 +4,9 @@ export { size, contentType }
 
 export default function Image() {
   return renderOGImage({
-    title: "Stop risky AI messages before they ship",
-    badge: "AI Production Gate",
+    title: "Your AI SDR is sending emails you'd never approve",
+    badge: "Bookbag Intelligence",
     description:
-      "Gate every AI-generated outbound message with human authority, audit trails, and training data export.",
+      "Catch hallucinations, spammy personalization, and compliance violations before they reach your prospects.",
   })
 }

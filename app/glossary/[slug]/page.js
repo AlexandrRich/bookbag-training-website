@@ -66,7 +66,7 @@ export default function GlossaryTermPage({ params }) {
       </section>
 
       {/* Full Description */}
-      <section className="py-16 border-t border-white/5 bg-[#03081c]">
+      <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="prose prose-invert prose-slate max-w-none">
             <h2 className="text-2xl font-medium text-white mb-6">What It Means</h2>
@@ -82,7 +82,7 @@ export default function GlossaryTermPage({ params }) {
       </section>
 
       {/* Why It Matters */}
-      <section className="py-16 border-t border-white/5">
+      <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl font-medium text-white mb-6">Why It Matters</h2>
           <p className="text-slate-400 leading-relaxed text-base">{data.whyItMatters}</p>
@@ -90,7 +90,7 @@ export default function GlossaryTermPage({ params }) {
       </section>
 
       {/* How Bookbag Helps */}
-      <section className="py-16 border-t border-white/5 bg-[#03081c]">
+      <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl font-medium text-white mb-6">How Bookbag Helps</h2>
           <Card className="p-8">
@@ -117,7 +117,7 @@ export default function GlossaryTermPage({ params }) {
 
       {/* Related Terms */}
       {data.relatedTerms && data.relatedTerms.length > 0 && (
-        <section className="py-16 border-t border-white/5">
+        <section className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <h2 className="text-2xl font-medium text-white mb-6">Related Terms</h2>
             <div className="flex flex-wrap gap-3">

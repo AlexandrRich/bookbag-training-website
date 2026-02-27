@@ -55,9 +55,9 @@ export default function ResourcesPage() {
       {/* Articles Grid */}
       <section className="py-24 border-t border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="space-y-6">
+          <div className="space-y-8">
             {articles.map((article, index) => (
-              <Link key={index} href={article.href}>
+              <Link key={index} href={article.href} className="block">
                 <Card className="p-8 group cursor-pointer hover:-translate-y-1 transition-all duration-300">
                   <div className="flex items-start gap-6">
                     <div className="w-12 h-12 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center flex-shrink-0 text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">
