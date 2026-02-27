@@ -9,7 +9,7 @@ export function Hero() {
 
       <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8 text-balance leading-[1.1]">
+        <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8 leading-[1.15]">
           Turn your AI&apos;s worst conversations into <span className="text-blue-400">its best training data</span>
         </h1>
 
